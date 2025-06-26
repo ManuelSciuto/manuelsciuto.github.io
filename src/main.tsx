@@ -24,8 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: WebsiteLinks.Myself,
-    element: <RootLayout />,
-    children: [{ index: true, element: <MyselfPage /> }],
+    element: <MyselfPage />,
   },
   {
     path: WebsiteLinks.Skills,

@@ -1,12 +1,12 @@
 import { NavLink } from "react-router";
 import { WebsiteLinks } from "../../utils/WebsiteLinks";
-import NavbarMenu from "./Menu";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
+import NavbarMenu from "./Menu";
 
-function Navbar() {
+function FixedNavbar() {
   return (
-    <div className="z-40 flex h-14 w-full items-center gap-x-4 px-3">
-      <NavLink to={WebsiteLinks.Home} className="text-2xl font-bold">
+    <div className="bg-custom-black border-custom-gray fixed top-3 left-3 z-40 flex h-16 w-[calc(100%-1.5rem)] items-center gap-x-4 rounded-full border-4 px-2">
+      <NavLink to={WebsiteLinks.Home} className="ml-2 text-2xl font-bold">
         Manuel
       </NavLink>
       <NavbarMenu />
@@ -18,4 +18,4 @@ function Navbar() {
     </div>
   );
 }
-export default Navbar;
+export default FixedNavbar;

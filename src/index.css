@@ -32,6 +32,44 @@ body {
     0px 25px 23.4px -3.7px hsl(0deg 0% 45% / 0.31);
 }
 
+.motocross-bg {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25) 90%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url("dirt-bg.jpg") repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.jetski-bg {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.25) 10%,
+      rgba(0, 0, 0, 0.25) 90%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url("chess-bg.jpg") repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.chess-bg {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.25) 10%,
+      rgba(0, 0, 0, 0.25) 90%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url("chess-bg.jpg") repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -179,5 +217,15 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

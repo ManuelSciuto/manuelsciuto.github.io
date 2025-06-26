@@ -20,16 +20,16 @@ function MobileMenu() {
           "bg-custom-white fixed top-0 z-40 h-[calc(100%+1px)] w-[calc(100%+1px)] duration-300 [clip-path:polygon(0%_0%,100%_0%,100%_100%)] md:hidden",
           isMenuOpen ? "right-0" : "-right-full",
         )}
+      />
+      <button
+        onClick={() => toggleMenu()}
+        className={twMerge(
+          "fixed top-3 z-50 cursor-pointer duration-500",
+          isMenuOpen ? "right-3" : "-right-full",
+        )}
       >
-        <div className="flex w-full p-3">
-          <button
-            onClick={() => toggleMenu()}
-            className="ml-auto cursor-pointer"
-          >
-            <XIcon className="stroke-custom-black h-10 w-10" />
-          </button>
-        </div>
-      </div>
+        <XIcon className="stroke-custom-black h-10 w-10" />
+      </button>
       <div
         className={twMerge(
           "bg-custom-white fixed top-0 z-40 h-[calc(100%+1px)] w-[calc(100%+1px)] duration-300 [clip-path:polygon(0%_0%,0%_100%,100%_100%)] md:hidden",
