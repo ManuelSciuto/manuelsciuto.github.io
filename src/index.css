@@ -39,7 +39,7 @@ body {
       rgba(0, 0, 0, 0.25) 90%,
       rgba(0, 0, 0, 0.8) 100%
     ),
-    url("dirt-bg.jpg") repeat;
+    url("./../public/dirt-bg.jpg") repeat;
   background-blend-mode: multiply;
   background-size: cover;
 }
@@ -52,7 +52,7 @@ body {
       rgba(0, 0, 0, 0.25) 90%,
       rgba(0, 0, 0, 0.8) 100%
     ),
-    url("chess-bg.jpg") repeat;
+    url("./../public/chess-bg.jpg") repeat;
   background-blend-mode: multiply;
   background-size: cover;
 }
@@ -65,7 +65,7 @@ body {
       rgba(0, 0, 0, 0.25) 90%,
       rgba(0, 0, 0, 0.8) 100%
     ),
-    url("chess-bg.jpg") repeat;
+    url("./../public/chess-bg.jpg") repeat;
   background-blend-mode: multiply;
   background-size: cover;
 }
