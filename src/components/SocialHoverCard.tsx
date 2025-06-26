@@ -8,6 +8,7 @@ interface Props {
   link: string;
   platform: string;
   triggerDivClass?: string;
+  roundIcon?: boolean;
 }
 
 function SocialHoverCard({
@@ -16,17 +17,25 @@ function SocialHoverCard({
   platform,
   link,
   triggerDivClass = "",
+  roundIcon = false,
 }: Props) {
   return (
     <HoverCard>
       <HoverCardTrigger>
         <div
           className={twMerge(
-            "h-10 w-10 overflow-hidden rounded-md border",
+            "border-custom-gray h-10 w-10 overflow-hidden rounded-md border",
             triggerDivClass,
           )}
         >
-          <img src={imgSrc} alt={alt} className="h-full w-full object-cover" />
+          <img
+            src={imgSrc}
+            alt={alt}
+            className={twMerge(
+              "h-full w-full object-cover",
+              roundIcon && "rounded-sm",
+            )}
+          />
         </div>
       </HoverCardTrigger>
       <HoverCardContent>
@@ -34,7 +43,7 @@ function SocialHoverCard({
         <a
           target="_blank"
           href={link}
-          className="bg-custom-red text-custom-white mt-1 flex w-fit items-center gap-x-1.5 rounded-md p-2 font-semibold"
+          className="bg-custom-red text-custom-white mt-2.5 flex w-fit items-center gap-x-1.5 rounded-md px-4 py-2 font-semibold"
         >
           Vai <ArrowRightIcon size={20} />
         </a>

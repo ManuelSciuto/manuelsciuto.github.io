@@ -1,6 +1,7 @@
 import { NavLink } from "react-router";
 import { WebsiteLinks } from "../../utils/WebsiteLinks";
 import NavbarMenu from "./Menu";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 function Navbar() {
   return (
@@ -9,14 +10,10 @@ function Navbar() {
         Manuel
       </NavLink>
       <NavbarMenu />
-      <NavLink
-        to={WebsiteLinks.Contattami}
-        className="group relative flex h-10 items-center justify-center overflow-hidden rounded-full border px-4"
-      >
-        <p className="group-hover:text-custom-black z-10 text-lg font-semibold duration-200">
+      <NavLink to={WebsiteLinks.Contattami}>
+        <InteractiveHoverButton className="text-custom-white bg-transparent">
           Contattami
-        </p>
-        <div className="bg-custom-white absolute top-0 left-0 z-0 h-10 w-0 duration-200 group-hover:w-full" />
+        </InteractiveHoverButton>
       </NavLink>
     </div>
   );

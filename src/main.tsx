@@ -6,6 +6,10 @@ import RootLayout from "./Root.tsx";
 import { WebsiteLinks } from "./utils/WebsiteLinks.ts";
 import ProgettiPage from "./pages/Progetti.tsx";
 import MyselfPage from "./pages/Myself.tsx";
+import SkillsLayout from "./pages/skills/layout.tsx";
+import SkillsDevopsPage from "./pages/skills/Devops.tsx";
+import SkillsIndexPage from "./pages/skills/index.tsx";
+import SkillsLanguagesPage from "./pages/skills/Languages.tsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +26,15 @@ const router = createBrowserRouter([
     path: WebsiteLinks.Myself,
     element: <RootLayout />,
     children: [{ index: true, element: <MyselfPage /> }],
+  },
+  {
+    path: WebsiteLinks.Skills,
+    element: <SkillsLayout />,
+    children: [
+      { index: true, element: <SkillsIndexPage /> },
+      { path: "languages", element: <SkillsLanguagesPage /> },
+      { path: "devops", element: <SkillsDevopsPage /> },
+    ],
   },
 ]);
 
