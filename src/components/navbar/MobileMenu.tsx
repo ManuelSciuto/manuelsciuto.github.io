@@ -17,7 +17,7 @@ function MobileMenu() {
     <>
       <div
         className={twMerge(
-          "bg-custom-white fixed top-0 z-40 h-[calc(100%+1px)] w-[calc(100%+1px)] duration-300 [clip-path:polygon(0%_0%,100%_0%,100%_100%)] md:hidden",
+          "bg-custom-white fixed top-0 z-40 h-[calc(100%+1px)] w-[calc(100%+1px)] duration-300 [clip-path:polygon(0%_0%,100%_0%,100%_100%)] lg:hidden",
           isMenuOpen ? "right-0" : "-right-full",
         )}
       />
@@ -32,13 +32,13 @@ function MobileMenu() {
       </button>
       <div
         className={twMerge(
-          "bg-custom-white fixed top-0 z-40 h-[calc(100%+1px)] w-[calc(100%+1px)] duration-300 [clip-path:polygon(0%_0%,0%_100%,100%_100%)] md:hidden",
+          "bg-custom-white fixed top-0 z-40 h-[calc(100%+1px)] w-[calc(100%+1px)] duration-300 [clip-path:polygon(0%_0%,0%_100%,100%_100%)] lg:hidden",
           isMenuOpen ? "left-0" : "-left-full",
         )}
       />
       {isMenuOpen && (
-        <div className="fixed z-40 flex h-full w-full items-center pb-16 md:hidden">
-          <div className="text-custom-black flex h-60 w-full flex-col">
+        <div className="fixed z-40 flex h-full w-full items-center pb-16 lg:hidden">
+          <div className="text-custom-black flex h-48 w-full flex-col">
             <NavLink
               to={WebsiteLinks.Home}
               className={twMerge(slideInLeft, navlinkClass)}
@@ -62,12 +62,6 @@ function MobileMenu() {
               className={twMerge(slideInRight, navlinkClass)}
             >
               Myself
-            </NavLink>
-            <NavLink
-              to={WebsiteLinks.Contattami}
-              className={twMerge(slideInLeft, navlinkClass)}
-            >
-              Contattami
             </NavLink>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import { NavLink } from "react-router";
 import { WebsiteLinks } from "../../utils/WebsiteLinks";
-import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 import NavbarMenu from "./Menu";
 
 function FixedNavbar() {
@@ -10,11 +9,14 @@ function FixedNavbar() {
         Manuel
       </NavLink>
       <NavbarMenu />
-      <NavLink to={WebsiteLinks.Contattami}>
-        <InteractiveHoverButton className="text-custom-white bg-transparent">
-          Contattami
-        </InteractiveHoverButton>
-      </NavLink>
+      <a
+        href="/CV.pdf"
+        download="CV Manuel Rosario Sciuto.pdf"
+        className="bg-custom-red group relative cursor-pointer rounded-full p-2 px-6 font-semibold"
+      >
+        <span className="absolute top-0 left-0 h-full w-full bg-black opacity-0 duration-200 group-hover:opacity-10" />
+        Get my CV
+      </a>
     </div>
   );
 }

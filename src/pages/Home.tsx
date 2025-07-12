@@ -1,9 +1,11 @@
 import LangsMarquee from "../components/LangsMarquee";
 import MyLinks from "../components/MyLinks";
+import WIPOverlay from "../components/WorkInProgressOverlay";
 
 function HomePage() {
   return (
     <div>
+      <WIPOverlay />
       <div className="mx-auto flex w-7/10 items-center justify-between gap-x-6 py-28">
         <div className="flex flex-col gap-y-6">
           <h1 className="text-5xl font-bold">

@@ -1,20 +1,22 @@
 import { NavLink } from "react-router";
 import { WebsiteLinks } from "../../utils/WebsiteLinks";
 import NavbarMenu from "./Menu";
-import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 function Navbar() {
   return (
-    <div className="z-40 flex h-14 w-full items-center gap-x-4 px-3">
+    <div className="z-40 flex h-14 w-full items-center gap-x-4 px-3 lg:justify-between">
       <NavLink to={WebsiteLinks.Home} className="text-2xl font-bold">
-        Manuel
+        Manuel R. Sciuto
       </NavLink>
       <NavbarMenu />
-      <NavLink to={WebsiteLinks.Contattami}>
-        <InteractiveHoverButton className="text-custom-white bg-transparent">
-          Contattami
-        </InteractiveHoverButton>
-      </NavLink>
+      <a
+        href="/CV.pdf"
+        download="CV Manuel Rosario Sciuto.pdf"
+        className="bg-custom-red group relative cursor-pointer rounded-full p-2 px-6 font-semibold"
+      >
+        <span className="absolute top-0 left-0 h-full w-full bg-black opacity-0 duration-200 group-hover:opacity-10" />
+        Get my CV
+      </a>
     </div>
   );
 }

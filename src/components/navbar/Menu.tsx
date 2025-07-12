@@ -11,28 +11,28 @@ function NavbarMenu() {
     <div className="flex flex-grow justify-center gap-x-2">
       <NavLink
         to={WebsiteLinks.Progetti}
-        className="group relative hidden px-3 py-1 text-lg md:block"
+        className="group relative hidden px-3 py-1 text-lg lg:block"
       >
         <div className="bg-custom-white absolute bottom-0 left-0 h-0.5 w-0 duration-300 group-hover:w-full" />
         Progetti
       </NavLink>
       <NavLink
         to={WebsiteLinks.Skills}
-        className="group relative hidden px-3 py-1 text-lg md:block"
+        className="group relative hidden px-3 py-1 text-lg lg:block"
       >
         <div className="bg-custom-white absolute bottom-0 left-0 h-0.5 w-0 duration-300 group-hover:w-full" />
         Skills
       </NavLink>
       <NavLink
         to={WebsiteLinks.Myself}
-        className="group relative hidden px-3 py-1 text-lg md:block"
+        className="group relative hidden px-3 py-1 text-lg lg:block"
       >
         <div className="bg-custom-white absolute bottom-0 left-0 h-0.5 w-0 duration-300 group-hover:w-full" />
         Myself
       </NavLink>
       <button
         onClick={() => toggleMenu()}
-        className="relative ml-auto block h-8 w-8 cursor-pointer md:hidden"
+        className="relative ml-auto block h-8 w-8 cursor-pointer lg:hidden"
       >
         <MenuIcon
           className={twMerge(

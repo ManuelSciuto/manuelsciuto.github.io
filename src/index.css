@@ -32,6 +32,14 @@ body {
     0px 25px 23.4px -3.7px hsl(0deg 0% 45% / 0.31);
 }
 
+.striped-bg {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.6) 0 25px,
+    rgba(255, 158, 11, 0.6) 25px 75px
+  );
+}
+
 .motocross-bg {
   background:
     linear-gradient(
