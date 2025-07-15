@@ -7,6 +7,7 @@ interface Props {
   bgGradient?: string;
   innerRounded?: boolean;
   addPixelRight?: boolean;
+  removePixelRight?: boolean;
 }
 
 function SkillCardGradientBorder({
@@ -15,6 +16,7 @@ function SkillCardGradientBorder({
   bgGradient,
   innerRounded = false,
   addPixelRight = false,
+  removePixelRight = false,
 }: Props) {
   return (
     <div
@@ -27,6 +29,7 @@ function SkillCardGradientBorder({
         className={twMerge(
           "absolute top-0.5 left-0.5 flex h-[calc(100%-4px)] flex-col items-center gap-y-2 rounded-md bg-[#232323] p-4 text-lg font-semibold",
           addPixelRight ? "w-[calc(8.75rem-0.5px)]" : "w-35",
+          removePixelRight ? "w-[calc(8.75rem+0.5px)]" : "w-35",
         )}
       >
         <div
